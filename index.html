@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Curriculum Vitae Narendra Heryan Syahputra, mahasiswa S1 Sistem Informasi Universitas Dian Nuswantoro dan calon Backend Developer.">
+<meta name="author" content="Narendra Heryan Syahputra">
+<title>Narendra Heryan Syahputra | CV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0d1220; --surface:#151c2e; --line:#26304a;
+  --text:#e7ebf3; --muted:#9aa6bd; --accent:#d2ab63; --accent-2:#7fa4d6;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--text);font:400 1rem/1.7 var(--sans)}
+a{color:var(--accent-2)}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.2;margin:0 0 .6rem}
+h2{font-size:1.9rem}
+h3{font-size:1.2rem}
+p{margin:0 0 1rem;max-width:68ch}
+.wrap{max-width:1040px;margin:0 auto;padding:0 1.25rem}
+
+/* Header & nav */
+body>header{border-bottom:1px solid var(--line)}
+nav{position:sticky;top:0;z-index:5;background:rgba(13,18,32,.94);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;padding-top:.7rem;padding-bottom:.7rem}
+nav strong{font-family:var(--serif);font-size:1.15rem}
+nav ul{list-style:none;margin:0;padding:0;display:flex;gap:1.1rem;flex-wrap:wrap}
+nav ul a{color:var(--muted);text-decoration:none;font-size:.95rem}
+nav ul a:hover{color:var(--accent)}
+
+.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:2.5rem;align-items:center;padding:4rem 0}
+.hero h1{font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:.4rem}
+.role{color:var(--accent);font-size:1.1rem;font-weight:500;margin-bottom:1.2rem}
+.btns{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.4rem}
+.btn{display:inline-block;padding:.65rem 1.3rem;border:1px solid var(--accent);border-radius:4px;color:var(--bg);background:var(--accent);text-decoration:none;font-weight:600}
+.btn.ghost{background:transparent;color:var(--accent)}
+.btn:hover{filter:brightness(1.1)}
+figure{margin:0}
+.hero figure{justify-self:center;width:100%;max-width:320px}
+.hero img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:6px;border:1px solid var(--line);background:var(--surface);box-shadow:14px 14px 0 var(--surface)}
+figcaption{margin-top:1.3rem;color:var(--muted);font-size:.9rem;text-align:center}
+
+/* Sections */
+main section{padding:3.5rem 0;border-top:1px solid var(--line)}
+.sub{color:var(--muted);margin-bottom:1.8rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.2rem}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:1.3rem}
+dl{margin:0}
+dt{color:var(--muted);font-size:.85rem}
+dd{margin:0 0 .8rem;font-weight:500}
+blockquote{margin:1.2rem 0 0;padding:.2rem 1.1rem;border-left:3px solid var(--accent);color:var(--muted);font-family:var(--serif);font-size:1.15rem}
+
+/* Table */
+.scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--line)}
+caption{text-align:left;color:var(--muted);padding:0 0 .6rem;font-size:.9rem}
+th,td{padding:.8rem 1rem;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+thead th{background:#1b2540;color:var(--accent);font-weight:600}
+tfoot td{color:var(--muted);font-size:.9rem}
+
+/* Timeline */
+.timeline{list-style:none;margin:0;padding:0 0 0 1.4rem;border-left:2px solid var(--line)}
+.timeline li{position:relative;padding-bottom:1.8rem}
+.timeline li::before{content:"";position:absolute;left:calc(-1.4rem - 7px);top:.45rem;width:12px;height:12px;border-radius:50%;background:var(--accent);border:2px solid var(--bg)}
+.timeline time{color:var(--accent);font-size:.9rem;font-weight:500}
+.timeline p{margin-bottom:.3rem;color:var(--muted)}
+
+/* Skills */
+label{display:block;font-weight:500;margin-bottom:.25rem}
+meter{width:100%;height:12px;margin-bottom:1rem}
+ul.tags{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:.5rem}
+ul.tags li{border:1px solid var(--line);border-radius:999px;padding:.25rem .9rem;font-size:.92rem;background:var(--bg)}
+
+/* Media */
+video,audio{width:100%;border-radius:6px;background:#000}
+audio{background:transparent}
+details{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:.9rem 1.2rem;margin-top:1.2rem}
+summary{cursor:pointer;font-weight:500}
+
+/* Form */
+form{display:grid;gap:1rem}
+input,textarea,select{width:100%;padding:.7rem .85rem;background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:4px;font:inherit}
+fieldset{border:1px solid var(--line);border-radius:6px;padding:.8rem 1rem}
+legend{padding:0 .4rem;color:var(--muted);font-size:.9rem}
+fieldset label{display:inline-block;font-weight:400;margin-right:1.2rem}
+input[type=radio]{width:auto;margin-right:.35rem}
+button{justify-self:start;cursor:pointer;font:inherit;font-weight:600;padding:.7rem 1.6rem;border:0;border-radius:4px;background:var(--accent);color:var(--bg)}
+address{font-style:normal}
+address p{margin-bottom:.5rem}
+.contact{display:grid;grid-template-columns:1fr 1.3fr;gap:2.5rem}
+
+body>footer{border-top:1px solid var(--line);padding:1.6rem 0;color:var(--muted);font-size:.9rem;text-align:center}
+
+@media (max-width:760px){
+  .hero,.contact{grid-template-columns:1fr}
+  .hero{padding:2.5rem 0}
+  .hero figure{order:-1;max-width:240px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <nav aria-label="Navigasi utama">
+    <div class="wrap">
+      <strong>Narendra H. S.</strong>
+      <ul>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#pendidikan">Pendidikan</a></li>
+        <li><a href="#pengalaman">Pengalaman</a></li>
+        <li><a href="#keahlian">Keahlian</a></li>
+        <li><a href="#media">Media</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="wrap hero">
+    <div>
+      <h1>Narendra Heryan Syahputra</h1>
+      <p class="role">Mahasiswa Sistem Informasi | Backend Developer</p>
+      <p>Mahasiswa S1 Sistem Informasi Universitas Dian Nuswantoro yang tertarik membangun sistem yang rapi, andal, dan berguna bagi penggunanya.</p>
+      <div class="btns">
+        <a class="btn" href="#kontak">Hubungi saya</a>
+        <a class="btn ghost" href="https://github.com/Narendra0610" target="_blank" rel="noopener">Lihat GitHub</a>
+      </div>
+    </div>
+    <figure>
+      <img src="../img/profile.jpeg" alt="Foto profil Narendra Heryan Syahputra" width="320" height="400">
+      <figcaption>Narendra, Semarang</figcaption>
+    </figure>
+  </div>
+</header>
+
+<main>
+
+  <section id="tentang" aria-labelledby="h-tentang">
+    <div class="wrap">
+      <h2 id="h-tentang">Tentang Saya</h2>
+      <div class="grid" style="grid-template-columns:1.6fr 1fr">
+        <article>
+          <p>Saya <strong>Narendra Heryan Syahputra</strong>, mahasiswa S1 Sistem Informasi di <strong>Universitas Dian Nuswantoro</strong> yang memiliki ketertarikan pada bidang teknologi informasi, analisis dan perancangan sistem, serta pengembangan solusi digital.</p>
+          <p>Saya memiliki semangat untuk terus belajar, mengembangkan kemampuan teknis maupun <em>soft skill</em>, dan menerapkan pengetahuan yang diperoleh melalui berbagai proyek akademik maupun kegiatan organisasi. Saya juga terbiasa bekerja secara kolaboratif, berpikir analitis, serta berusaha memahami kebutuhan pengguna untuk menghasilkan solusi yang efektif dan relevan.</p>
+          <p>Saya terbuka terhadap berbagai kesempatan untuk memperluas pengalaman, meningkatkan kompetensi, dan berkontribusi dalam lingkungan profesional di bidang teknologi informasi.</p>
+          <blockquote><p>Belajar terus, bekerja rapi, dan selalu mulai dari kebutuhan pengguna.</p></blockquote>
+        </article>
+        <aside class="card" aria-label="Data diri">
+          <h3>Data Diri</h3>
+          <dl>
+            <dt>Tempat, tanggal lahir</dt>
+            <dd>Semarang, <time datetime="2005-10-06">06 Oktober 2005</time></dd>
+            <dt>Domisili</dt>
+            <dd>Semarang, Jawa Tengah</dd>
+            <dt>Program studi</dt>
+            <dd>S1 Sistem Informasi, semester 3</dd>
+            <dt>Fokus</dt>
+            <dd>Backend Development</dd>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section id="pendidikan" aria-labelledby="h-pendidikan">
+    <div class="wrap">
+      <h2 id="h-pendidikan">Pendidikan</h2>
+      <p class="sub">Riwayat pendidikan formal dari yang terbaru.</p>
+      <div class="scroll">
+        <table>
+          <caption>Tabel riwayat pendidikan Narendra</caption>
+          <thead>
+            <tr>
+              <th scope="col">Jenjang</th>
+              <th scope="col">Institusi</th>
+              <th scope="col">Jurusan</th>
+              <th scope="col">Tahun</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>S1</td>
+              <td>Universitas Dian Nuswantoro</td>
+              <td>Sistem Informasi</td>
+              <td>2025 &ndash; sekarang</td>
+            </tr>
+            <tr>
+              <td>SMK</td>
+              <td>SMKN 8 Semarang</td>
+              <td>Pengembangan Perangkat Lunak &amp; Gim</td>
+              <td>Lulus 2024</td>
+            </tr>
+            <tr>
+              <td>SMP</td>
+              <td>SMPN 7 Semarang</td>
+              <td>&ndash;</td>
+              <td>Lulus 2021</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="4">Semester 3 &middot; <abbr title="Indeks Prestasi Kumulatif">IPK</abbr> 3,65</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="pengalaman" aria-labelledby="h-pengalaman">
+    <div class="wrap">
+      <h2 id="h-pengalaman">Pengalaman</h2>
+      <p class="sub">Organisasi dan pekerjaan, dari yang terbaru.</p>
+      <ol class="timeline">
+        <li>
+          <time>Masa kuliah</time>
+          <h3>Himpunan Mahasiswa Sistem Informasi</h3>
+          <p>Anggota organisasi mahasiswa Sistem Informasi, Universitas Dian Nuswantoro. Terlibat dalam kegiatan kolaboratif bersama rekan satu program studi.</p>
+        </li>
+        <li>
+          <time>Sebelum kuliah &middot; 6 bulan</time>
+          <h3>Data Entry, PT. Reycom Document Solusi</h3>
+          <p>Mengelola dan menginput data dokumen dengan teliti, sehingga terbiasa bekerja dengan ketepatan dan tenggat waktu.</p>
+        </li>
+        <li>
+          <time>Masa SMK</time>
+          <h3>Anggota SNAPANDEV</h3>
+          <p>Berorganisasi di SNAPANDEV, wadah pengembangan perangkat lunak di SMKN 8 Semarang.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="keahlian" aria-labelledby="h-keahlian">
+    <div class="wrap">
+      <h2 id="h-keahlian">Keahlian</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Hard Skill</h3>
+          <label for="m-laravel">Laravel (dasar)</label>
+          <meter id="m-laravel" min="0" max="100" value="50">50%</meter>
+          <label for="m-excel">Microsoft Excel</label>
+          <meter id="m-excel" min="0" max="100" value="70">70%</meter>
+        </article>
+        <article class="card">
+          <h3>Soft Skill</h3>
+          <ul class="tags">
+            <li>Kolaborasi tim</li>
+            <li>Berpikir analitis</li>
+            <li>Komunikasi</li>
+            <li>Teliti</li>
+            <li>Adaptif</li>
+            <li>Manajemen waktu</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Bahasa</h3>
+          <ul>
+            <li>Indonesia &ndash; kelas kakap</li>
+            <li>Inggris &ndash; aktif dasar</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="media" aria-labelledby="h-media">
+    <div class="wrap">
+      <h2 id="h-media">Media</h2>
+      <p class="sub">Perkenalan singkat dalam bentuk video dan audio.</p>
+      <div class="grid">
+        <figure>
+          <video controls preload="metadata" poster="profile.png">
+            <source src="perkenalan.mp4" type="video/mp4">
+            Browser Anda tidak mendukung elemen video.
+          </video>
+          <figcaption>Video perkenalan diri</figcaption>
+        </figure>
+        <figure>
+          <audio controls preload="none">
+            <source src="perkenalan.mp3" type="audio/mpeg">
+            Browser Anda tidak mendukung elemen audio.
+          </audio>
+          <figcaption>Audio salam pembuka</figcaption>
+        </figure>
+      </div>
+      <details>
+        <summary>Tentang tautan profesional</summary>
+        <p style="margin-top:.8rem">Riwayat proyek dan kode saya dapat dilihat di GitHub, sedangkan jejaring profesional ada di LinkedIn.</p>
+      </details>
+    </div>
+  </section>
+
+  <section id="kontak" aria-labelledby="h-kontak">
+    <div class="wrap contact">
+      <div>
+        <h2 id="h-kontak">Kontak</h2>
+        <p class="sub">Silakan hubungi saya untuk kolaborasi, magang, atau sekadar berdiskusi.</p>
+        <address>
+          <p>Email: <a href="mailto:rendrahs0610@gmail.com">rendrahs0610@gmail.com</a></p>
+          <p>Telepon/WA: <a href="tel:+6282220221024">0822 2022 1024</a></p>
+          <p>LinkedIn: <a href="https://www.linkedin.com/in/narendra-heryan-syahputra-a5abbb31a" target="_blank" rel="noopener">Narendra Heryan Syahputra</a></p>
+          <p>GitHub: <a href="https://github.com/Narendra0610" target="_blank" rel="noopener">Narendra0610</a></p>
+          <p>Instagram: <a href="https://www.instagram.com/rendrahs_/" target="_blank" rel="noopener">@rendrahs_</a></p>
+        </address>
+      </div>
+
+      <form action="mailto:rendrahs0610@gmail.com" method="post" enctype="text/plain">
+        <div>
+          <label for="nama">Nama</label>
+          <input type="text" id="nama" name="nama" required placeholder="Nama lengkap">
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="nama@email.com">
+        </div>
+        <div>
+          <label for="topik">Topik</label>
+          <select id="topik" name="topik">
+            <option>Kolaborasi proyek</option>
+            <option>Peluang magang atau kerja</option>
+            <option>Pertanyaan umum</option>
+          </select>
+        </div>
+        <fieldset>
+          <legend>Balasan lewat</legend>
+          <label><input type="radio" name="balas" value="email" checked>Email</label>
+          <label><input type="radio" name="balas" value="whatsapp">WhatsApp</label>
+        </fieldset>
+        <div>
+          <label for="pesan">Pesan</label>
+          <textarea id="pesan" name="pesan" rows="5" required placeholder="Tulis pesan Anda"></textarea>
+        </div>
+        <button type="submit">Kirim pesan</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 Narendra Heryan Syahputra &middot; Universitas Dian Nuswantoro</p>
+</footer>
+
+</body>
+</html>
